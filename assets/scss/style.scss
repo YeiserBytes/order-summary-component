@@ -1,0 +1,182 @@
+// Import
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+// Variables
+$color-primary: hsl(225, 100%, 94%); // Pale blue
+$color-secondary: hsl(245, 75%, 52%); // Bright blue
+$color-neutral: hsl(225, 100%, 98%); // Very pale blue
+$color-neutral-light: hsl(224, 23%, 55%); // Desaturated blue
+$color-neutral-dark: hsl(223, 47%, 23%); // Dark blue
+
+$n: #3829e0; // Bright blue
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    body {
+        font-family: 'Red Hat Display', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        max-width: 100vh;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        background: hsl(226, 26%, 80%);
+
+        .container {
+            max-width: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            background: $color-primary;
+            border-radius: 10px;
+            box-shadow: 0px 119px 80px rgba(56, 41, 224, 0.0264707),
+            0px 49.7154px 36.6839px rgba(56, 41, 224, 0.0406597),
+            0px 26.5802px 19.8733px rgba(56, 41, 224, 0.047332),
+            0px 14.9006px 11.0722px rgba(56, 41, 224, 0.0498634),
+            0px 7.91362px 5.76121px rgba(56, 41, 224, 0.0522926),
+            0px 3.29304px 2.31822px rgba(56, 41, 224, 0.07);
+
+            .hero {
+                border-radius: 10px 10px 0 0;
+                margin-bottom: 2em;
+                max-width: 350px;
+            }
+
+            .title {
+                color: $color-neutral-dark;
+                font-weight: 900;
+            }
+
+            p {
+                color: $color-neutral-light;
+            }
+
+            .description {
+                color: $color-neutral-light;
+                margin-top: 1em;
+            }
+
+            .priceBanner {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                margin-top: 2em;
+                margin-bottom: 2em;
+
+                cursor: pointer;
+
+                .planPrice {
+                    margin: 0 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    margin-left: 1em;
+
+                    h1 {
+                        font-size: 14px;
+                        font-weight: 900;
+                        color: $color-neutral-dark;
+                    }
+
+                    p {
+                        color: $color-neutral-light;
+                        font-size: 13px;
+                    }
+                }
+
+                a {
+                    margin-left: 3em;
+                    font-weight: 500;
+                    transition: color 0.3s ease-in-out;
+
+                    &:hover {
+                        color: hsl(245, 75%, 52%);
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .btn {
+                padding: 1em;
+                width: 80%;
+                border: none;
+            }
+
+            .btn-primary {
+                background: $color-secondary;
+                font-weight: 900;
+                color: $color-primary;
+                border-radius: 10px;
+                transition: background 0.3s ease-in-out;
+
+                &:hover {
+                    background: hsl(245, 74%, 59%);
+                }
+            }
+
+            .btn-cancel {
+                color: $color-neutral-light;
+                font-weight: 700;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                transition: color 0.3s ease-in-out;
+
+                &:hover {
+                    color: hsl(223, 47%, 23%);
+                }
+            }
+        }
+
+        .attribution {
+            color: $color-neutral-light;
+            margin-top: 2em;
+            font-size: 12px;
+
+            a {
+                color: hsl(224, 55%, 39%);
+            }
+        }
+
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        .container {
+            max-width: 300px;
+            margin: 0 auto;
+            margin-left: 10px;
+            margin-top: 10px;
+            
+
+            .hero {
+                max-width: 300px;
+            }
+
+            .title {
+                font-size: 25px;
+            }
+
+            .description {
+                font-size: 15px;
+                max-width: 250px;
+            }
+        }
+        
+        .attribution {
+            text-align: center;
+            padding: 0;
+            text-overflow: ellipsis;
+        }
+    }
+}
